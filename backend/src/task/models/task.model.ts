@@ -1,4 +1,4 @@
-import { Field, ObjectType } from '@nestjs/graphql';
+import { Field, Int, ObjectType } from '@nestjs/graphql';
 
 @ObjectType()
 export class Task {
@@ -15,5 +15,5 @@ export class Task {
   status: 'NOT_STARTED' | 'IN_PROGRESS' | 'COMPLETED';
 
   @Field({ nullable: true })
-  description: string;
+  description?: string;
 }
